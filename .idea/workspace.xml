@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52e281d3-b8c5-461b-9db4-be975adb3ad6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Trabalho de Regressão.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/atividade_enzimatica.csv" afterDir="false" />
-    </list>
+    <list default="true" id="52e281d3-b8c5-461b-9db4-be975adb3ad6" name="Changes" comment="Trabalho de Regressão" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +58,19 @@
       <option name="presentableId" value="Default" />
       <updated>1742583067527</updated>
     </task>
+    <task id="LOCAL-00001" summary="Trabalho de Regressão">
+      <option name="closed" value="true" />
+      <created>1742594241145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742594241145</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Trabalho de Regressão" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trabalho de Regressão" />
   </component>
 </project>

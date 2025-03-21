@@ -1,17 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Chamada de Dados
 dados = np.loadtxt("atividade_enzimatica.csv", delimiter=',')
 
-X = dados[:, :-1]  # Temperatura e pH
-y = dados[:, -1].reshape(-1, 1)  # Atividade enzimática
+# 1 Questão
+X = dados[:, :-1]
+y = dados[:, -1].reshape(-1, 1)
 
 X_intercepto = np.hstack([np.ones((X.shape[0], 1)), X])
 
-# Figure 1 - Dois gráficos de espalhamento separados
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
-# Gráfico 1: Temperatura vs. Atividade Enzimática
 ax1.scatter(X[:, 0], y, color='blue', label="Dados experimentais")
 ax1.set_xlabel("Temperatura (°C)")
 ax1.set_ylabel("Atividade Enzimática")
@@ -19,7 +19,6 @@ ax1.set_title("Temperatura vs. Atividade Enzimática")
 ax1.legend()
 ax1.grid(True)
 
-# Gráfico 2: pH vs. Atividade Enzimática
 ax2.scatter(X[:, 1], y, color='red', label="Dados experimentais")
 ax2.set_xlabel("pH")
 ax2.set_ylabel("Atividade Enzimática")
@@ -30,6 +29,7 @@ ax2.grid(True)
 plt.tight_layout()
 plt.show()
 
+# 2 Questão
 print(f"Dimensão da matriz X (Regressoras): {X.shape}")  # N x p
 print(f"Dimensão do vetor y (Variável dependente): {y.shape}")  # N x 1
 
