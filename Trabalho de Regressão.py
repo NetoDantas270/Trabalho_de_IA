@@ -76,12 +76,10 @@ for _ in range(R):
     X_treino, X_teste = X_intercepto[treino_idx], X_intercepto[teste_idx]
     y_treino, y_teste = y[treino_idx], y[teste_idx]
 
-    # MQO Tradicional
     beta_ols_mc = np.linalg.inv(X_treino.T @ X_treino) @ X_treino.T @ y_treino
     y_pred_ols = X_teste @ beta_ols_mc
     rss_ols.append(np.sum((y_teste - y_pred_ols) ** 2))
 
-    # MQO Regularizado para cada lambda
     for alpha2 in lambdas:
         I = np.eye(X_treino.shape[1])
         I[0, 0] = 0
@@ -89,7 +87,6 @@ for _ in range(R):
         y_pred_ridge = X_teste @ beta_ridge_mc
         rss_ridge[alpha2].append(np.sum((y_teste - y_pred_ridge) ** 2))
 
-    # Média dos valores observáveis
     y_pred_media = np.full(y_teste.shape, np.mean(y_treino))
     rss_media.append(np.sum((y_teste - y_pred_media) ** 2))
 
@@ -124,7 +121,7 @@ print("-" * 80)
 print(f"{'Modelo':<25} | {'Média':>10} | {'Desvio Padrão':>15} | {'Máximo':>10} | {'Mínimo':>10}")
 print("-" * 80)
 for model, stats in rss_stats.items():
-    print(f"{model:<25} | {stats['mean']:>10.4f} | {stats['std']:>15.4f} | {stats['max']:>10.4f} | {stats['min']:>10.4f}")
+    print(f"{model:<25} | {stats['mean']:>10.6f} | {stats['std']:>15.6f} | {stats['max']:>10.6f} | {stats['min']:>10.6f}")
 print("-" * 80)
 
 labels = list(rss_stats.keys())
